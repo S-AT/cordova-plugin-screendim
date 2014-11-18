@@ -24,8 +24,8 @@
 		    </feature>
         </config-file>
 
-	    <header-file src="src/ios/ScreenDim.h" />
-	    <source-file src="src/ios/ScreenDim.m" />
+	    <header-file src="src/ios/ScreenDimPlugin.h" />
+	    <source-file src="src/ios/ScreenDimPlugin.m" />
     </platform>
     
     <!-- android -->
