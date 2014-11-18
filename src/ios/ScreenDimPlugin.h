@@ -1,5 +1,5 @@
 //
-//  ScreenDimPlugin.h
+//  ScreenDim.h
 //  ios-cordova
 //
 //  Created by Andrew Lunny on 12-07-11.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface ScreenDimPlugin : CDVPlugin
+@interface ScreenDim : CDVPlugin
 
 - (void) enable:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 - (void) disable:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
