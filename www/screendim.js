@@ -1,39 +1,24 @@
-(function (gap, w) {
-    // dims by default
-    var on = true;
-    
-    var screenDim = { };
-    
-    if(gap) {
+var exec = require("cordova/exec");
 
-        screenDim.enable = function () {
-            on = true;
-            gap.exec(null, null, 'ScreenDim', 'enable', []);
-        };
-
-        screenDim.disable = function () {
-            on = false;
-            gap.exec(null, null, 'ScreenDim', 'disable', []);
-        };
-
-        screenDim.toggle = function () {
-            if (on) {
-                this.disable();
-            } else {
-                this.enable();
-            }
-        };
-        
-        gap.screenDim = screenDim;
-    }
-    else {
-        screenDim.enable = function(){};
-        screenDim.disable = screenDim.enable;
-        screenDim.toggle = screenDim.enable;
-    }
+module.exports = {
+    on: true,
     
-    if(!w.screenDim) {
-        w.screenDim = screenDim;
-    }
+    enable: function () {
+        this.on = true;
+        exec(null, null, 'ScreenDim', 'enable', []);
+    },
+
+    disable: function () {
+        this.on = false;
+        exec(null, null, 'ScreenDim', 'disable', []);
+    },
+
+    toggle: function () {
+        if (this.on) {
+            this.disable();
+        } else {
+            this.enable();
+        }
+    },
     
-}).call(this, (window.cordova || window.Cordova), window);
+};
