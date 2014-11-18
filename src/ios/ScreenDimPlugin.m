@@ -13,12 +13,14 @@
 - (void) enable:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
 {	
     [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+    NSLog(@" ScreenDim Plugin: dim enabled");
 }
 
 
 - (void) disable:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options 
 {   
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    NSLog(@" ScreenDim Plugin: dim disabled");
 }
 
 @end
