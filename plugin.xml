@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.phonegap.build.screendim"
-    version="1.0.1">
-
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="com.phonegap.build.screendim"
+      version="1.0.2">
+      
     <name>Screen Dim</name>
-
-    <asset src="www/screendim.js" target="screendim.js" />
+    <description>Cordova Screen Dim Plugin</description>
+    <keywords>cordova,screendim</keywords>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+    <js-module src="www/screendim.js" name="screenDim">
+        <clobbers target="cordova.screenDim" />
+    </js-module>
 
     <!-- ios -->
     <platform name="ios">
-        <plugins-plist key="ScreenDim"
-                    string="ScreenDimPlugin" />
 
-        <header-file src="ScreenDimPlugin.h" />
+        <config-file target="config.xml" parent="/*">
+		    <feature name="ScreenDim">
+			    <param name="ios-package" value="ScreenDim"/>
+		    </feature>
+        </config-file>
 
-        <source-file src="ScreenDimPlugin.m" />
+	    <header-file src="src/ios/ScreenDim.h" />
+	    <source-file src="src/ios/ScreenDim.m" />
     </platform>
-
+    
     <!-- android -->
     <platform name="android">
-        <source-file src="src/android/ScreenDim.java"
-                target-dir="src/com/phonegap/build/screendim" />
+        <source-file src="src/android/ScreenDim.java" target-dir="src/com/phonegap/build/screendim" />
 
         <config-file target="res/xml/plugins.xml" parent="/plugins">
-            <plugin name="ScreenDim"
-                    value="com.phonegap.build.screendim.ScreenDim" />
+            <plugin name="ScreenDim" value="com.phonegap.build.screendim.ScreenDim" />
         </config-file>
     </platform>
 </plugin>
