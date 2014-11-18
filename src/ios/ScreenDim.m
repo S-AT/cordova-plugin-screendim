@@ -10,14 +10,14 @@
 
 @implementation ScreenDim
 
-- (void) enable:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+- (void) enable:(CDVInvokedUrlCommand *)command
 {	
     [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
     NSLog(@" ScreenDim Plugin: dim enabled");
 }
 
 
-- (void) disable:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options 
+- (void) disable:(CDVInvokedUrlCommand *)command
 {   
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     NSLog(@" ScreenDim Plugin: dim disabled");
