@@ -2,9 +2,11 @@ package com.phonegap.build.screendim;
 
 import org.json.JSONArray;
 
+import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.PluginResult;
-import org.apache.cordova.LOG;
+import org.apache.cordova.PluginResult.Status;
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import android.app.Activity;
 import android.view.WindowManager;
@@ -14,14 +16,19 @@ import android.util.Log;
 public class ScreenDim extends CordovaPlugin {
     public final static String TAG = "ScreenDim";
 
-    public PluginResult execute(String action, JSONArray args, String callbackId) {
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext)
+    throws JSONException {
         if (action.equals("enable")) {
             enable();
         } else if (action.equals("disable")) {
             disable();
+        } else {
+          // Returning false results in a "MethodNotFound" error.
+          return false;
         }
 
-        return new PluginResult(PluginResult.Status.OK);
+        return true;
     }
 
     public void enable() {
