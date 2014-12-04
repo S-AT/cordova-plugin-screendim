@@ -9,8 +9,11 @@ import org.apache.cordova.LOG;
 import android.app.Activity;
 import android.view.WindowManager;
 import android.view.Window;
+import android.util.Log;
 
 public class ScreenDim extends CordovaPlugin {
+    private final String tag= "ScreenDim";
+
     public PluginResult execute(String action, JSONArray args, String callbackId) {
         if (action.equals("enable")) {
             enable();
@@ -22,10 +25,12 @@ public class ScreenDim extends CordovaPlugin {
     }
 
     public void enable() {
+        Log.d(this.tag, "Enable screen dimmer");
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
-    public void disable() {  
+    public void disable() {
+        Log.d(this.tag, "Disable screen dimmer");
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 

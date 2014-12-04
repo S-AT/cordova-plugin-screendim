@@ -16,23 +16,20 @@
     <clobbers target="cordova.screenDim" />
   </js-module>
 
-    <!-- ios -->
-    <platform name="ios">
-
-        <config-file target="config.xml" parent="/*">
-		    <feature name="ScreenDim">
-			    <param name="ios-package" value="ScreenDim"/>
-		    </feature>
-        </config-file>
-
-	    <header-file src="src/ios/ScreenDim.h" />
-	    <source-file src="src/ios/ScreenDim.m" />
-    </platform>
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+    <feature name="ScreenDim">
+	    <param name="ios-package" value="ScreenDim"/>
+    </feature>
+    </config-file>
+    <header-file src="src/ios/ScreenDim.h" />
+    <source-file src="src/ios/ScreenDim.m" />
+  </platform>
 
     <!-- android -->
   <platform name="android">
     <source-file src="src/android/ScreenDim.java" target-dir="src/com/phonegap/build/screendim" />
-
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="ScreenDim" >
         <param name="android-package" value="com.phonegap.build.screendim.ScreenDim"/>
