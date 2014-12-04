@@ -1,6 +1,6 @@
 # ScreenDim
 
-> PhoneGap/Cordova plugin for enabling/disabling screen dim
+Cordova/Phonegap plugin for enabling/disabling screen dim.
 
 ## Usage
 
@@ -27,7 +27,9 @@
 
 ## Installation
 
-Use `pluginstall` - https://github.com/alunny/pluginstall
+```
+cordova plugin add <this repo url>
+```
 
 ## What/Why
 
@@ -51,3 +53,10 @@ part of your app, and enable it again once you're done.
 ## LICENSE
 
 MIT
+
+## Changelog
+
+1.0.3 Update for cordova >= 3.6.x (Android)
+1.0.2 Update for cordova >= 3.6.x (iOS)
+1.0.1 Update for cordova 3.0.x (Android/iOS)
+1.0.0 Initial release (Android/iOS)
