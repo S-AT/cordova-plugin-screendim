@@ -56,7 +56,7 @@ MIT
 
 ## Changelog
 
-1.0.3 Update for cordova >= 3.6.x (Android)
-1.0.2 Update for cordova >= 3.6.x (iOS)
-1.0.1 Update for cordova 3.0.x (Android/iOS)
-1.0.0 Initial release (Android/iOS)
+* 1.0.3 Update for cordova >= 3.6.x (Android)
+* 1.0.2 Update for cordova >= 3.6.x (iOS)
+* 1.0.1 Update for cordova 3.0.x (Android/iOS)
+* 1.0.0 Initial release (Android/iOS)
