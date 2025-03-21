@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  id="com.phonegap.build.screendim"
-  version="1.0.3">
+  id="cordova-plugin-screendim"
+  version="1.0.4">
 
-  <name>Screen Dim</name>
-  <description>Cordova Screen Dim Plugin</description>
+  <name>cordova-plugin-screendim</name>
+  <description>cordova plugin for toggling screen dimming</description>
     <keywords>cordova,screendim</keywords>
 
   <engines>

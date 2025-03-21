@@ -1,0 +1,21 @@
+{
+	"name": "cordova-plugin-screendim",
+	"version": "1.0.4",
+	"description": "cordova plugin for toggling screen dimming",
+	"cordova": {
+	  "id": "cordova-plugin-screendim",
+	  "platforms": [
+		"android",
+		"ios"
+	  ]
+	},
+	"repository": {
+	  "type": "git",
+	  "url": "git+https://github.com/S-AT/ScreenDim.git"
+	},
+	"keywords": [
+	  "ecosystem:cordova",
+	  "cordova-ios",
+	  "cordova-android"
+	]
+}
